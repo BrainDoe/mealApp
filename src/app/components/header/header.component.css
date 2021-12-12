@@ -1,0 +1,50 @@
+nav {
+  min-width: 70px;
+  padding: 12px 10px;
+  background-color: rgb(200, 255, 71);
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.80);
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-bar h2 {
+  font-size: 30px;
+  color: rgb(20, 15, 15);
+  font-weight: 300;
+  font-family: cursive;;
+}
+
+.top-bar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-bar ul li {
+  margin-right: 10px;
+}
+
+.top-bar ul li a {
+  color: rgb(20, 15, 15);
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+
+.top-bar ul li a span {
+  font-size: 15px;
+  position: absolute;
+  right: -7px;
+  top: 0;
+  display: block;
+  background-color: tan;
+  padding: 1px 3px;
+  border-radius: 3px;
+}

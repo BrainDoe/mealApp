@@ -1,0 +1,27 @@
+.meal-card {
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: .3s ease;
+  border: 1px solid rgb(241, 192, 192);
+}
+
+.meal-card:hover {
+  box-shadow: 0 0px 10px rgba(63, 46, 46, 0.8);
+}
+
+.meal-card .image-wrapper {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.meal-card .meal-properties {
+  padding: 15px 10px;
+}

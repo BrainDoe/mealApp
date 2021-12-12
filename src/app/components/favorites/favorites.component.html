@@ -1,0 +1,16 @@
+<div class="container">
+  <div *ngFor="let favorite of favorites; let i = index">
+    <a href="{{ i }}" style="cursor: pointer;">
+      <div class="">
+        <div>
+          <img [src]="favorite.imagePath" alt="{{ favorite.name }}" class="" width="200px" height="200px">
+        </div>
+        <div class="">
+          <h2>{{ favorite.name }}</h2>
+          <p>{{ favorite.description }}</p>
+          <p>Contributor: <span>{{ favorite.contributor }}</span></p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

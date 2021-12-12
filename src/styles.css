@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #f4f4f4;;
+}
+
+.container {
+  width: 98%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Reusable button */
+.button {
+  font-size: 18px;
+  outline: none;
+  border: none;
+  background: none;
+  background-color: rgb(200, 255, 71);
+  padding: 12px 15px;
+  border-radius: 5px;
+  color: #222222;
+  transition: .3s ease;
+}
+
+.button:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.80);
+}
+
+/* ///////////////////////////////// */
+/* ///////////////////////////////// */
+/* ///////////////////////////////// */
+.meal-card .meal-properties {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.meal-properties h2 {
+  margin-bottom: 10px;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.meal-card .meal-properties p {
+  margin: 0;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.meal-card .meal-properties p span {
+  font-size: 18px;
+  color: goldenrod
+}

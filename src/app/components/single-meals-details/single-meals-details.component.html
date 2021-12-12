@@ -1,0 +1,47 @@
+<div class="details-items">
+  <div class="image-wrapper">
+    <img [src]=[meal.imagePath] alt="{{ meal.imagePath }}" class="meal-details-img">
+  </div>
+  <div class="meal-content">
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <h2>{{ meal.name }}</h2>
+      <div class="dot-wrapper">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+    <p>{{ meal.description }}</p>
+    <!-- <ul *ngFor="let mealIngredient of meal.ingredients">
+      <li>Meal Ingredient Name: {{ mealIngredient.name }}</li>
+      <li>Meal Ingredient Amount: ({{ mealIngredient.amount }})</li>
+    </ul> -->
+    <h3>Ingredients</h3>
+    <table class="table-stripe">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let mealIngredient of meal.ingredients">
+          <td>{{ mealIngredient.name }}</td>
+          <td>{{ mealIngredient.amount }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="contributor">Author: <span>{{ meal.contributor }}</span></p>
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <button (click)="onAddToFavorite()" type="button" class="button">Add to Favorites</button>
+      <button type="button" class="button">Order Meal</button>
+    </div>
+    <ul class="more-info">
+      <li><a>Edit Meal</a></li>
+      <li><a>Order Meal</a></li>
+      <li><a (click)="onAddToFavorite()">Add to Favorites</a></li>
+      <li><a (click)="publishMeal()">Publish Meal</a></li>
+      <li><a>Delete Meal</a></li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+  <div style="margin-top: 70px;">
+    <div class="add-new-meal" style="margin-bottom: 40px;">
+      <button (click)="onNewRecipe()" type="button" class="button">Add New meal</button>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;"> 
+      <div>
+        <app-single-meal *ngFor="let meal of meals; let i = index" [meal]="meal" [index]="i"></app-single-meal>
+      </div>
+  
+      <div>
+        <!-- <app-single-meals-details></app-single-meals-details> -->
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

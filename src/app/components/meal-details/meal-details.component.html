@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="meal-details-container">
+    <div class="details-items">
+      <div class="image-wrapper">
+        <img [src]=[meal.imagePath] alt="{{ meal.imagePath }}" class="meal-details-img">
+      </div>
+      <div class="meal-content">
+        <h2>{{ meal.name }}</h2>
+        <p>{{ meal.description }}</p>
+        <!-- <ul *ngFor="let mealIngredient of meal.ingredients">
+          <li>Meal Ingredient Name: {{ mealIngredient.name }}</li>
+          <li>Meal Ingredient Amount: ({{ mealIngredient.amount }})</li>
+        </ul> -->
+        <h3>Ingredients</h3>
+        <table class="table-stripe">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let mealIngredient of meal.ingredients">
+              <td>{{ mealIngredient.name }}</td>
+              <td>{{ mealIngredient.amount }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="contributor">Meal Contributor: <span>{{ meal.contributor }}</span></p>
+        <div style="display: flex; align-items: center; justify-content: space-between; width: 70%;">
+          <button type="button" class="button">Add to Favorites</button>
+          <button type="button" class="button">Like</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

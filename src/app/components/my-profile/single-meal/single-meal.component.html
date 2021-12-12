@@ -1,0 +1,13 @@
+<a [routerLink]=[index] style="cursor: pointer; color: #222">
+  <div class="meal-card">
+    <div class="image-wrapper">
+      <img [src]="meal.imagePath" alt="{{ meal.name }}" class="meal-img">
+    </div>
+    <div class="meal-properties">
+      <h2>{{ meal.name }}</h2>
+      <p>{{ meal.description }}</p>
+      <p>Author: <span>{{ meal.contributor }}</span></p>
+    </div>
+  </div>
+</a>
+
