@@ -55,8 +55,10 @@ export class MealsService {
     this.mealsChanged.next(this.meals.slice())
   }
 
-  publishMeal(meal: Meal) {
-    meal.published = !meal.published
-    this.mealsChanged.next(this.meals.slice())
+  publishedMeal(meal: Meal) {
+    return this.meals.filter(meal => meal.published === meal.published)
+    
+    // meal.published = !meal.published
+    // this.mealsChanged.next(publishedMeal)
   }
 }
